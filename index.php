@@ -51,7 +51,11 @@ foreach ($lines as $index => $value) {
   $data = implode("||", $line);
   echo '| ' . $data;
   if ($index < $n - 1) {
-   echo "|-\n";
+    if ($index % 2 == 0) {
+      echo "|-\n";
+    } else {
+      echo "|- style=\"background:#f0f0f0;\"\n";
+    }
   }
  }
 }
